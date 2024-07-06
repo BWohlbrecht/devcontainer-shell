@@ -1,0 +1,16 @@
+{
+	"name": "playmix-devenv",
+
+	"build": {
+		"dockerfile": "build/Dockerfile",
+		"context": "build",
+		"args": {
+			"WORKSPACE_DIR": "/workspace"
+		}
+	},
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+
+	"containerUser": "main"
+}
